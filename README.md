@@ -1,5 +1,5 @@
 # Joyful JavaScript
-Code snippets of JavaScript
+Easy-to-follow code snippets of JavaScript
 
 ## Reduce
 The `reduce()` function is great for reducing an array into single-value.
