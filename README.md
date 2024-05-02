@@ -19,5 +19,6 @@ The `map()` function can be used to apply a calculation to each element in an ar
 ```javascript
 const carPrices = [30000, 50000, 25000, 75000];
 const carPricesAfterTax = carPrices.map(price => price * 1.05);
+
 console.log(carPricesAfterTax); // Output: [31000, 42500, 27500, 82500]
 ```
