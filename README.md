@@ -60,3 +60,16 @@ const carPricesAfterTax = carPrices.map(addSalesTax)
 console.log(carPricesAfterTax); // Output: 189000
 ```
 Ah, pure bliss.
+
+## Conditionals
+
+### Optional Chaining
+
+You can use optional chaining to tell whether an object or property exists in an object. This is handy for avoiding errors.
+
+```javascript
+const user = {name: 'Alice', address: null};
+const street = user.address?.street || 'Unknown';
+
+console.log(street); // Output: 'Unknown'
+```
