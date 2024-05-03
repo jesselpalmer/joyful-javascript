@@ -1,7 +1,7 @@
 # Joyful JavaScript
 Easy-to-follow code snippets of JavaScript
 
-## Array methods
+## Array functions
 
 ### Methods
 
