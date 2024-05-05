@@ -73,3 +73,25 @@ const street = user.address?.street || 'Unknown';
 
 console.log(street); // Output: 'Unknown'
 ```
+
+## Closure
+
+You can use closures to keep data private and maintain it in a persistent state, which is useful for data encapsulation and efficient memory utilization. 
+This data remains in memory even after the function has been executed, and it stays there until the closure is no longer referenced or the program completes.
+
+```javascript
+const createIdGenerator = () => {
+    let id = 0;  // This variable is in the outer function's scope
+
+    return () => {
+        id += 1;  // This inner function accesses and modifies 'id'
+        return id;
+    };
+};
+
+const generateId = createIdGenerator();  // The function 'generateId' is a closure
+
+console.log(generateId());  // Outputs: 1
+console.log(generateId());  // Outputs: 2
+console.log(generateId());  // Outputs: 3
+```
