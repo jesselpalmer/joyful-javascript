@@ -74,7 +74,7 @@ const street = user.address?.street || 'Unknown';
 console.log(street); // Output: 'Unknown'
 ```
 
-## Closure
+## Closures
 
 You can use closures to keep data private and maintain it in a persistent state, which is useful for data encapsulation and efficient memory utilization. 
 This data remains in memory even after the function has been executed, and it stays there until the closure is no longer referenced or the program completes.
