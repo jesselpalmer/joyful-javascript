@@ -81,12 +81,12 @@ This data remains in memory even after the function has been executed, and it st
 
 ```javascript
 const createIdGenerator = () => {
-    let id = 0;  // This variable is in the outer function's scope
+  let id = 0;  // This variable is in the outer function's scope
 
-    return () => {
-        id += 1;  // This inner function accesses and modifies 'id'
-        return id;
-    };
+  return () => {
+    id += 1;  // This inner function accesses and modifies 'id'
+      return id;
+  };
 };
 
 const generateId = createIdGenerator();  // The function 'generateId' is a closure
