@@ -36,8 +36,7 @@ console.log(fancyCars); // Output: [50000, 75000]
 
 ### Chaining Array Functions
 
-Now let's have some fun! We can combine our array methods in interesting ways. Let's try to chain together
-the `map()` and `reduce()` methods.
+Now let's have some fun! We can combine our array methods in interesting ways. Let's try to chain together the `map()` and `reduce()` methods.
 
 ```javascript
 const carPrices = [30000, 50000, 25000, 75000];
@@ -76,8 +75,7 @@ console.log(street); // Output: 'Unknown'
 
 ## Closures
 
-You can use closures to keep data private and maintain it in a persistent state, which is useful for data encapsulation and efficient memory utilization. 
-This data remains in memory even after the function has been executed, and it stays there until the closure is no longer referenced or the program completes.
+You can use closures to keep data private and maintain it in a persistent state, which is useful for data encapsulation and efficient memory utilization. This data remains in memory even after the function has been executed, and it stays there until the closure is no longer referenced or the program completes.
 
 ```javascript
 const createIdGenerator = () => {
@@ -94,4 +92,33 @@ const generateId = createIdGenerator();  // The function 'generateId' is a closu
 console.log(generateId());  // Outputs: 1
 console.log(generateId());  // Outputs: 2
 console.log(generateId());  // Outputs: 3
+```
+
+## Memoization
+
+By memoizing functions, you can cache the results of functions that are expensive to compute or frequently called with the same inputs, making your programs faster and more efficient by reducing unnecessary calculations.
+
+```javascript
+const memoize = (fn) => {
+  const cache = {};
+
+  return (num) => {
+    if (cache[num] !== undefined) { 
+      console.log(`Cached result for: ${num}`); 
+      return cache[num];  // Return cached result if it exists
+    } else {
+      console.log(`Computing result for: ${num}`); 
+      const result = fn(num);  // Compute the result if not cached
+      cache[num] = result;  // Store the computed result in the cache
+      return result;
+    }
+  };
+};
+
+const square = (num) => num * num;
+
+const memoizedSquare = memoize(square);  // Create a memoized version of the square function
+
+console.log(memoizedSquare(4));  // Outputs: Computing result for: 4 -> 16
+console.log(memoizedSquare(4));  // Outputs: Cached result for: 4 -> 16
 ```
