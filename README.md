@@ -83,7 +83,7 @@ const createIdGenerator = () => {
 
   return () => {
     id += 1;  // This inner function accesses and modifies 'id'
-      return id;
+    return id;
   };
 };
 
