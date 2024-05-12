@@ -29,9 +29,20 @@ console.log(carPricesAfterTax); // Output: [31000, 42500, 27500, 82500]
 The `filter()` method can be used to filter out elements.
 
 ```javascript
+const carPrices = [30000, 50000, 25000, 75000];
 const fancyCars = carPrices.filter(price => price >= 50000);
 
 console.log(fancyCars); // Output: [50000, 75000]
+```
+
+#### Some
+The `some()` method can be used to check if at least one element meets a given condition. If the condition is met for at least one element `true` is returned, otherwise `false` is returned.
+
+```javascript
+const carPrices = [30000, 50000, 25000, 75000];
+const hasFancyCars = carPrices.some(price => price >= 50000);
+
+console.log(hasFancyCars); // Output: true
 ```
 
 ### Chaining Array Functions
