@@ -36,13 +36,23 @@ console.log(fancyCars); // Output: [50000, 75000]
 ```
 
 #### Some
-The `some()` method can be used to check if at least one element meets a given condition. If the condition is met for at least one element `true` is returned, otherwise `false` is returned.
+The `some()` method can be used to check if at least one element meets a given condition. If the condition is met for at least one element, `true` is returned; otherwise, `false` is returned.
 
 ```javascript
 const carPrices = [30000, 50000, 25000, 75000];
 const hasFancyCars = carPrices.some(price => price >= 50000);
 
 console.log(hasFancyCars); // Output: true
+```
+
+#### Every
+The `every()` method can be used to check if all elements meet a given condition. If the condition is met for all the elements, `true` is returned; otherwise, `false` is returned.
+
+```javascript
+const carPrices = [90000, 50000, 100000, 75000];
+const areAllCarsFancy = carPrices.every(price => price >= 50000);
+
+console.log(areAllCarsFancy); // Output: true
 ```
 
 ### Chaining Array Functions
