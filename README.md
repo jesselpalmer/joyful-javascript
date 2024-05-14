@@ -143,3 +143,15 @@ const memoizedSquare = memoize(square);  // Create a memoized version of the squ
 console.log(memoizedSquare(4));  // Outputs: Computing result for: 4 -> 16
 console.log(memoizedSquare(4));  // Outputs: Cached result for: 4 -> 16
 ```
+
+## Destructuring
+
+### Array Destructuring
+
+You can use array destructuring to get values from an array in one line.
+
+```javascript
+const [firstHousePrice, secondHousePrice, thirdHousePrice] = [200000, 600000, 400000];
+console.log(firstHousePrice, secondHousePrice, thirdHousePrice); // Output: 200000 600000 400000
+
+```
